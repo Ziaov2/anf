@@ -143,7 +143,7 @@ h1 .ch { transform: translateY(105%) rotate(4deg); transform-origin: 0 100%; }
     <a class="mark" href="./"><i></i>ANF</a>
     <nav class="mono">
       <a href="#launcher">Le launcher</a>
-      <a href="https://github.com/Ziaov2/anf/releases">Versions</a>
+      <a href="https://github.com/Ziaov2/anf">GitHub</a>
     </nav>
   </header>
 
@@ -153,7 +153,7 @@ h1 .ch { transform: translateY(105%) rotate(4deg); transform-origin: 0 100%; }
       <h1 aria-label="ANF"><span class="ln"><span class="ch" style="--d:.15s">A</span><span class="ch" style="--d:.24s">N</span><span class="ch" style="--d:.36s">F</span></span></h1>
       <p class="tag"><span class="ln"><span style="--d:.7s">Un clic,</span></span><span class="ln"><span style="--d:.82s">t'es <em>en jeu.</em></span></span></p>
       <p class="sub fade" style="--d:1.05s">Les addons, le menu, ton rendu. Il gère, toi tu joues.</p>
-      <a class="dl fade" style="--d:1.2s" id="dl" href="https://github.com/Ziaov2/anf/releases/latest/download/ANF-Launcher-Setup.exe">
+      <a class="dl fade" style="--d:1.2s" id="dl" href="download/ANF-Launcher-Setup.exe">
         <span><b>Télécharger</b><small id="dl-meta">Windows&ensp;/&ensp;84 Mo</small></span>
         <svg width="22" height="26" viewBox="0 0 22 26" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 1v20M2 13l9 9 9-9M1 25h20"/></svg>
       </a>
@@ -185,14 +185,14 @@ h1 .ch { transform: translateY(105%) rotate(4deg); transform-origin: 0 100%; }
       <h2 class="fade">21h.<br><em>On vous attend.</em></h2>
       <p class="fade" style="--d:.1s">Le mot de passe est sur le Discord, comme d'hab.</p>
     </div>
-    <a class="dl fade" style="--d:.2s" href="https://github.com/Ziaov2/anf/releases/latest/download/ANF-Launcher-Setup.exe">
+    <a class="dl fade" style="--d:.2s" href="download/ANF-Launcher-Setup.exe">
       <span><b>Télécharger</b><small>Mises à jour automatiques</small></span>
       <svg width="22" height="26" viewBox="0 0 22 26" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 1v20M2 13l9 9 9-9M1 25h20"/></svg>
     </a>
   </section>
   <footer class="mono">
     <span>ANF&ensp;/&ensp;fait par la commu</span>
-    <a href="https://github.com/Ziaov2/anf/releases">Anciennes versions</a>
+    <a href="https://github.com/Ziaov2/anf">Code du site</a>
   </footer>
 </div>
 
@@ -225,12 +225,12 @@ requestAnimationFrame(function () {
   els.forEach(function (e) { io.observe(e); });
 })();
 
-// version et taille réelles de la dernière release
-fetch("https://api.github.com/repos/Ziaov2/anf/releases/latest").then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
-  if (!j) return;
-  var a = (j.assets || []).filter(function (x) { return /\.exe$/i.test(x.name); })[0];
-  if (a) document.getElementById("dl-meta").textContent = "Windows / " + Math.round(a.size / 1048576) + " Mo / " + j.tag_name;
-  document.getElementById("ver").textContent = j.tag_name;
+// version et taille réelles, lues dans le fichier de mise à jour du launcher
+fetch("download/latest.yml", { cache: "no-store" }).then(function (r) { return r.ok ? r.text() : ""; }).then(function (t) {
+  var v = (t.match(/^version:\s*(.+)$/m) || [])[1], s = (t.match(/size:\s*(\d+)/) || [])[1];
+  if (!v) return;
+  document.getElementById("dl-meta").textContent = "Windows / " + (s ? Math.round(s / 1048576) + " Mo / " : "") + "v" + v.trim();
+  document.getElementById("ver").textContent = "v" + v.trim();
 }).catch(function () {});
 
 // fond : la même carte que dans le launcher, plus discrète

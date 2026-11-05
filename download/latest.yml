@@ -1,0 +1,8 @@
+version: 2.0.1
+files:
+  - url: ANF-Launcher-Setup.exe
+    sha512: 4WO/pakzvaJ6RuwmsHHF5+S6df0evaR2r3KcUR2n1hDlAnlladBkKnjKs2kHCbVIROwxtTuoYWweon5/uQGT3w==
+    size: 84134227
+path: ANF-Launcher-Setup.exe
+sha512: 4WO/pakzvaJ6RuwmsHHF5+S6df0evaR2r3KcUR2n1hDlAnlladBkKnjKs2kHCbVIROwxtTuoYWweon5/uQGT3w==
+releaseDate: '2026-11-05T16:21:18.398Z'
