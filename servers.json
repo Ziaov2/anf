@@ -1,0 +1,34 @@
+{
+  "servers": [
+    {
+      "id": "snk",
+      "tag": "SNK",
+      "name": "Attack on Titan : Ressurection",
+      "game": "Garry's Mod",
+      "desc": "Sessions le vendredi et le dimanche à 21h. Fin du SNK prévue vers décembre.",
+      "schedule": "Ven. et dim. / 21h",
+      "host": "194.69.160.33",
+      "port": 27049,
+      "collection": "3554671950",
+      "map": "enceintes",
+      "terrain": "a",
+      "status": "open",
+      "order": 1
+    },
+    {
+      "id": "ww2",
+      "tag": "WW2",
+      "name": "Hégémonie : Poudre Funeste",
+      "game": "Garry's Mod",
+      "desc": "Pas encore ouvert. Les candidatures se font sur le Gform du Discord.",
+      "schedule": "Bientôt",
+      "host": "",
+      "port": 0,
+      "collection": "",
+      "map": "front",
+      "terrain": "b",
+      "status": "soon",
+      "order": 2
+    }
+  ]
+}
