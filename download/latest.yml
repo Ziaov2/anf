@@ -1,8 +1,8 @@
-version: 2.2.0
+version: 2.2.1
 files:
-  - url: https://raw.githubusercontent.com/Ziaov2/anf/releases/ANF-Launcher-Setup-2.2.0.exe
-    sha512: TzZN2MO+ij3x2lOtwXOBq1WuOnuIFPRpdGC5QfpX0ibxwVdHxmEJyWJ0sx1BuMPBy4htsZ8GKTWj6pYlTBt+Ag==
-    size: 84650201
-path: https://raw.githubusercontent.com/Ziaov2/anf/releases/ANF-Launcher-Setup-2.2.0.exe
-sha512: TzZN2MO+ij3x2lOtwXOBq1WuOnuIFPRpdGC5QfpX0ibxwVdHxmEJyWJ0sx1BuMPBy4htsZ8GKTWj6pYlTBt+Ag==
-releaseDate: '2026-11-07T12:16:41.515Z'
+  - url: https://raw.githubusercontent.com/Ziaov2/anf/releases/ANF-Launcher-Setup-2.2.1.exe
+    sha512: SyR9ca1r0cW4h3VFrVQHVLp7mfm6PYmTDlaugPwPc6BrZzUWSssCHeEObooHx136fss+bJtP2o6QluHLQlc6GA==
+    size: 84678369
+path: https://raw.githubusercontent.com/Ziaov2/anf/releases/ANF-Launcher-Setup-2.2.1.exe
+sha512: SyR9ca1r0cW4h3VFrVQHVLp7mfm6PYmTDlaugPwPc6BrZzUWSssCHeEObooHx136fss+bJtP2o6QluHLQlc6GA==
+releaseDate: '2026-11-07T12:40:35.768Z'
